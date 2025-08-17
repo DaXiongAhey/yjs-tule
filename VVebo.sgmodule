@@ -1,13 +1,13 @@
 #!name= VVebo
 #!desc=修复 VVebo 用户主页时间线显示和粉丝列表
 #!author=suiyuran
-#!category=能蟹仔
+#!category=能蟹仔(change)
 
 [Script]
 
 fix-vvebo-user-timeline = type=http-request, pattern=^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count\?, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
 
-fix-vvebo-user-timeline2 = type=http-request, pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\?, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
+fix-vvebo-user-timeline2 = type=http-request, pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/statuses_timefilter\?, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
 
 fix-vvebo-user-timeline3 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\?, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, requires-body=true
 
